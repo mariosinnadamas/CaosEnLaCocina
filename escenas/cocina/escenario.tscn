@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://eptfgpiicv68"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_bcwvs"]
+b = Vector2(0, 648)
+
+[node name="Escenario" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("SegmentShape2D_bcwvs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D"]
+position = Vector2(1152, 0)
+shape = SubResource("SegmentShape2D_bcwvs")
