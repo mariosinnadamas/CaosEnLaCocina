@@ -1,7 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://eptfgpiicv68"]
+[gd_scene load_steps=6 format=3 uid="uid://eptfgpiicv68"]
+
+[ext_resource type="Texture2D" uid="uid://bn1qio0s4q0ks" path="res://imgs/abstract-background-black-and-white-chessboard-seamless-pattern-background-optical-illusion-texture-ready-for-your-design-free-vector.jpg" id="1_iwjop"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_bcwvs"]
 b = Vector2(0, 648)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_iwjop"]
+a = Vector2(-4.9830982e-05, -1140)
+b = Vector2(5.2453663e-07, 12)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_sigjg"]
+b = Vector2(-6.1035156e-05, 1152)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_73x17"]
+b = Vector2(0, 649)
 
 [node name="Escenario" type="Node2D"]
 
@@ -10,6 +22,23 @@ b = Vector2(0, 648)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("SegmentShape2D_bcwvs")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(12, 0)
+rotation = 1.5707964
+shape = SubResource("SegmentShape2D_iwjop")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 648)
+rotation = -1.5707964
+shape = SubResource("SegmentShape2D_sigjg")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(1152, 0)
-shape = SubResource("SegmentShape2D_bcwvs")
+shape = SubResource("SegmentShape2D_73x17")
+
+[node name="Suelo" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(591.00006, 321)
+rotation = 0.7853982
+scale = Vector2(1.3474251, 1.3537532)
+texture = ExtResource("1_iwjop")
