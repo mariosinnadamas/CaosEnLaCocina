@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dnwjqyrkgh3xj"
-path="res://.godot/imported/IndieFlower.ttf-4d830dc5294969d147875de319d8b6a8.fontdata"
+path="res://.godot/imported/IndieFlower.ttf-9c856f8a53840886ffd04d7bc6039386.fontdata"
 
 [deps]
 
-source_file="res://escenas/HUDS/Comandas/IndieFlower.ttf"
-dest_files=["res://.godot/imported/IndieFlower.ttf-4d830dc5294969d147875de319d8b6a8.fontdata"]
+source_file="res://resources/IndieFlower.ttf"
+dest_files=["res://.godot/imported/IndieFlower.ttf-9c856f8a53840886ffd04d7bc6039386.fontdata"]
 
 [params]
 

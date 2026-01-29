@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://eptfgpiicv68"]
+[gd_scene load_steps=7 format=3 uid="uid://eptfgpiicv68"]
 
-[ext_resource type="Texture2D" uid="uid://bn1qio0s4q0ks" path="res://imgs/abstract-background-black-and-white-chessboard-seamless-pattern-background-optical-illusion-texture-ready-for-your-design-free-vector.jpg" id="1_iwjop"]
+[ext_resource type="Texture2D" uid="uid://bm0s5a63g7bvh" path="res://resources/10.jpg" id="1_iwjop"]
+[ext_resource type="Script" uid="uid://ckjgtjk1ykq3d" path="res://escenas/cocina/escenario.gd" id="1_sigjg"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_bcwvs"]
 b = Vector2(0, 648)
@@ -16,29 +17,29 @@ b = Vector2(-6.1035156e-05, 1152)
 b = Vector2(0, 649)
 
 [node name="Escenario" type="Node2D"]
+script = ExtResource("1_sigjg")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(767, 427)
 shape = SubResource("SegmentShape2D_bcwvs")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(12, 0)
+position = Vector2(779, 427)
 rotation = 1.5707964
 shape = SubResource("SegmentShape2D_iwjop")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, 648)
+position = Vector2(767, 1075)
 rotation = -1.5707964
 shape = SubResource("SegmentShape2D_sigjg")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1152, 0)
+position = Vector2(1919, 427)
 shape = SubResource("SegmentShape2D_73x17")
 
 [node name="Suelo" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(591.00006, 321)
-rotation = 0.7853982
-scale = Vector2(1.3474251, 1.3537532)
+position = Vector2(1156.75, 674)
+scale = Vector2(2.1792855, 1.197143)
 texture = ExtResource("1_iwjop")

@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://janmqvky7476"]
+
+[ext_resource type="Script" uid="uid://b17wi63wrnwxc" path="res://scripts/boton_jugar.gd" id="1_42kh3"]
+[ext_resource type="Script" uid="uid://dtdeje3qbo30v" path="res://scripts/boton_salir.gd" id="2_v4kvd"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="Titulo" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "CAOS EN LA COCINA
+"
+
+[node name="BotonJugar" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "JUGAR"
+script = ExtResource("1_42kh3")
+
+[node name="BotonSalir" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "SALIR"
+script = ExtResource("2_v4kvd")
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/BotonJugar" to="CenterContainer/VBoxContainer/BotonJugar" method="_on_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/BotonSalir" to="CenterContainer/VBoxContainer/BotonSalir" method="_on_pressed"]

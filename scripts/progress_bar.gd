@@ -6,7 +6,7 @@ const GREEN  = Color(0.2, 1.0, 0.2)
 const YELLOW = Color(1.0, 0.9, 0.2)
 const RED    = Color(1.0, 0.2, 0.2)
 
-@export var max_time := 10.0
+@export var max_time := 5.0
 var time_left := 0.0
 
 var fill_style: StyleBoxFlat

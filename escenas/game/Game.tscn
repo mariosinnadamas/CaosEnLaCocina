@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://b33fsb1s6rrcr"]
+
+[ext_resource type="PackedScene" uid="uid://c02iptrx8urm7" path="res://escenas/HUDS/ComandasManager.tscn" id="1_41bx0"]
+[ext_resource type="PackedScene" uid="uid://bnlmoovb0kebp" path="res://escenas/HUDS/Hud.tscn" id="2_kf5ff"]
+
+[sub_resource type="GDScript" id="GDScript_hnaif"]
+script/source = "extends Node2D
+
+@onready var manager := $ComandasManager
+@onready var list := $CanvasLayer/Hud/ComandasList
+
+func _ready():
+	print(\"Container asignado\", list)
+	print(\"Manager\", manager)
+	manager.container = list
+	manager.start()
+"
+
+[node name="Game" type="Node2D"]
+script = SubResource("GDScript_hnaif")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Hud" parent="CanvasLayer" instance=ExtResource("2_kf5ff")]
+
+[node name="ComandasManager" parent="." instance=ExtResource("1_41bx0")]
